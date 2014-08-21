@@ -30,6 +30,20 @@ var milk = {
       $(this).closest('#newitem').find('#inputItem').val('');
     });
 
+    $('#newitem').on('submit', function(event) {
+      event.preventDefault();
+      console.log('submit');
+
+      var newChore = {
+        name: $('#newitem').find('#inputItem').val(),
+        completed: false
+      };
+
+      console.log(newChore.name);
+      milk.createChores(newChore);
+      $(this).closest('#newitem').find('#inputItem').val('');
+    });
+
     $('#itemList').on('click', '.icon-close', function(event) {
       event.preventDefault();
       $(this).css('text-shadow', 'none');
@@ -112,16 +126,16 @@ var milk = {
     });
 
     //edit todo
-    $('#itemList').on('click', '#editorSubmit', function (e) {
+    $('#itemList').on('submit', '#editor', function (e) {
       e.preventDefault();
       var id = $(this).siblings('p').data('itemid');
       var newName = {
-        name: $(this).siblings('form').children('input').val()
+        name: $(this).children('input').val()
       }
       console.log(newName);
       console.log(id);
       $(this).toggleClass('hide');
-      $(this).siblings('form').toggleClass('hide');
+      // $(this).siblings('form').toggleClass('hide');
       milk.editStatus(id, newName);
 
     });

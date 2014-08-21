@@ -7,7 +7,6 @@ var itemTmpl = [
     "<form id=\"editor\" class=\"hide\">",
       "<input id=\"editorInput\" name=\"todo\" type=\"text\" class=\"item zero\" placeholder=\"<%= element.name %>\" required=\"required\">",
     "</form>",
-    "<button class=\"hide\" id=\"editorSubmit\">Edit</button>",
   "</div>",
   "<% if (element.completed === \"true\") %>",
   "<div class=\"itemHolder <%= element.completed %>\">",
