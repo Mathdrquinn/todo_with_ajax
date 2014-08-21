@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>todos</title>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    <link rel="stylesheet" href="/bower_components/icomoon/style.css">
+    <link rel="stylesheet" href="/bower_components/double/style.css">
+
+  </head>
+  <body>
+
+    <hgroup>
+      <h1>todos</h1>
+    </hgroup>
+
+    <div class="container">
+      <p class="brown zero"></p>
+      <form action="" id="newitem" class="">
+        <span class="icon"><span class="icon-angle-double-down"></span></span>
+        <div>
+          <input id="inputItem" name="todo" type="text" class="" placeholder="What Needs To Be Done?" required="required">
+        </div>
+      </form>
+      <div id="itemList" class="zero">
+        <!-- <div class="itemHolder">
+          <div class="icon"><span class="icon-checkmark"><span class="icon-checkmark-2"></div>
+          <p class="item zero"><span class="icon-close"></p>
+        </div> -->
+      </div>
+      <p id="info" class="zero">
+        <span id="left">items left</span>
+        <span id="middle">
+          <span id='all'>All</span>
+          <span id='active'>Active</span>
+          <span id='completed'>Complete</span>
+        </span>
+        <span id="right">
+          <button>Clear Completed (FUNC!!)</button>
+          </span>
+      </p>
+    </div>
+
+    <footer>Doube-click to edit a todo</footer>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/underscore/underscore.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+        <script src="scripts/itemTmpl.js"></script>
+
+        <!-- build:js scripts/main.js -->
+        <script src="scripts/main.js"></script>
+        <!-- endbuild -->
+</body>
+</html>
